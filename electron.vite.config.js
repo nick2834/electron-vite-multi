@@ -52,7 +52,18 @@ export default defineConfig({
       minify: 'esbuild',
       rollupOptions: {
         // 自定义底层的 Rollup 打包配置
-        input: getEntryPath()
+        input: getEntryPath(),
+        output: {
+          compact: true,
+          manualChunks: (id) => {
+            if (id.includes('node_modules')) {
+              return id.toString().split('node_modules/')[1].split('/')[0].toString()
+            }
+          },
+          entryFileNames: 'static/js/[name].[hash].js',
+          assetFileNames: 'static/[ext]/[name].[hash].[ext]',
+          chunkFileNames: 'static/js/[name]-[hash].js'
+        }
       },
       emptyOutDir: true
     }

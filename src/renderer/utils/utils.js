@@ -1,6 +1,5 @@
 // 切换css
 export const changeTheme = (theme) => {
-  console.log(theme)
   const head = document.head
   document.getElementById('theme')?.remove()
   const styleDom = document.createElement('style')

@@ -1,8 +1,7 @@
 @font-face {
-  font-family: "iconfont"; /* Project id 359459 */
-  src: url('iconfont.woff2?t=1685082968832') format('woff2'),
-       url('iconfont.woff?t=1685082968832') format('woff'),
-       url('iconfont.ttf?t=1685082968832') format('truetype');
+  font-family: "iconfont";
+  src:
+    url('iconfont.ttf?t=1685082968832') format('truetype');
 }
 
 .iconfont {
@@ -76,4 +75,3 @@
 .icon-zhengju:before {
   content: "\e72f";
 }
-
