@@ -1,6 +1,6 @@
 # electron-vite-court
 
-An Electron application with Vue
+electron-vite vue3 多页多窗口模式
 
 ## Recommended IDE Setup
 
