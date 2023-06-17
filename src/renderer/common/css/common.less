@@ -1,0 +1,91 @@
+[dragable] {
+  -webkit-app-region: drag;
+}
+
+[undragable] {
+  -webkit-app-region: no-drag;
+}
+
+.drag {
+  -webkit-app-region: drag
+}
+
+.no-drag {
+  -webkit-app-region: no-drag
+}
+
+::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: @item-hover-bg;
+  border-radius: 5px;
+}
+
+.theme-default .ant-btn {
+  color: #ffffff;
+}
+
+.theme-default .ant-btn:hover,
+.theme-default .ant-btn:focus {
+  color: #ffffff;
+}
+
+.text-cut {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.text-cut-2 {
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.icon {
+  cursor: pointer;
+
+  &.light,
+  &.iconfont {
+    &:hover {
+      color: @primary-color;
+    }
+  }
+}
+
+// .ant-popover-buttons .ant-btn{
+//   color: unset !important;
+// }
+.size {
+  font-size: @font-size-base;
+}
+
+.size-sm {
+  font-size: @font-size-sm;
+}
+
+.size-lg {
+  font-size: @font-size-lg
+}
+
+.color-base {
+  color: @heading-color;
+}
+
+.color-error {
+  color: @error-color
+}
+
+.color-secondary {
+  color: @text-color-secondary
+}

@@ -1,0 +1,25 @@
+@import "./common.less";
+@import "./fonts/iconfont.css";
+@import "./flex.less";
+@import "ant-design-vue/lib/style/themes/default.less";
+
+@font-face {
+  font-family: "PingFang";
+  src: url("./fonts/PingFangSC-Regular.ttf") format("woff2");
+}
+
+body {
+  background-color: transparent;
+  font-family: "PingFang" !important;
+  font-family: -apple-system, BlinkMacSystemFont, Apple Color Emoji, SF Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+body .custom-dark {
+  @primary-color: #ed0a5a;
+  // @primary-color: #0052d9;
+  @side-bg: #3e3f3f;
+  @layout-sider-background: #3e3f3f; // 侧边
+  @layout-body-background: #262626; // 二级路由
+  @layout-footer-background: #1a1a1a; // 三级路由
+  @layout-header-background: #171717; // 三级路由顶部
+}

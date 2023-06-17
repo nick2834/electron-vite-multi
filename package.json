@@ -26,15 +26,17 @@
     "@rushstack/eslint-patch": "^1.3.0",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vue/eslint-config-prettier": "^7.1.0",
+    "ant-design-vue": "^3.2.20",
     "electron": "^24.4.1",
     "electron-builder": "^23.6.0",
     "electron-vite": "^1.0.23",
     "eslint": "^8.42.0",
     "eslint-plugin-vue": "^9.14.1",
+    "glob": "^10.2.7",
     "less": "^4.1.3",
     "prettier": "^2.8.8",
+    "unplugin-vue-components": "^0.25.1",
     "vite": "^4.3.9",
-    "vue": "^3.3.4",
-    "glob": "^10.2.7"
+    "vue": "^3.3.4"
   }
 }

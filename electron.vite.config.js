@@ -1,6 +1,8 @@
 import { defineConfig, externalizeDepsPlugin } from 'electron-vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve, join } from 'path'
+import Components from 'unplugin-vue-components/vite'
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 const glob = require('glob')
 
 const getEntryPath = () => {
@@ -25,11 +27,23 @@ export default defineConfig({
   renderer: {
     resolve: {
       alias: {
-        '@renderer': resolve('src/renderer'),
+        '@': resolve('src/renderer'),
         '@utils': resolve('src/renderer/utils')
       }
     },
-    plugins: [vue()],
+    plugins: [
+      vue(),
+      Components({
+        resolvers: [AntDesignVueResolver({ importStyle: true })]
+      })
+    ],
+    css: {
+      preprocessorOptions: {
+        less: {
+          javascriptEnabled: true
+        }
+      }
+    },
     build: {
       outDir: resolve(process.cwd(), 'out/renderer'), // 指定输出路径（相对于 项目根目录)
       sourcemap: false, // 构建后是否生成 source map 文件
