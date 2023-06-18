@@ -1,19 +1,17 @@
 <template>
-  <a-layout>
+  <a-layout class="wrapper">
     <a-layout-sider width="64px"></a-layout-sider>
-    <a-layout-content>
-      <a-layout-header>
-        <a href="../Subs/index.html">跳转SubsWindow</a>
-      </a-layout-header>
-      <a-layout-content>
+    <a-layout-content class="wrapper-content flex flex-direction">
+      <a-layout-header>header</a-layout-header>
+      <a-layout-content class="flex-sub">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero molestias expedita esse aut
         cupiditate autem magni ratione nam! Ipsum eaque vel perspiciatis sint maxime non optio harum
         sunt alias placeat.
       </a-layout-content>
       <a-layout-footer>
-        <a-button type="primary" @click="changeTheme">点击</a-button>
+        <!-- <a-button type="primary" @click="changeTheme">点击</a-button> -->
 
-        <a-button @click="openSubsWindow">打开新窗口</a-button>
+        <a-button type="primary" @click="openSubsWindow">open new window</a-button>
       </a-layout-footer>
     </a-layout-content>
   </a-layout>
@@ -28,8 +26,13 @@ const { DarkMode } = useTheme()
 watch(
   () => isDark,
   (val) => {
-    // String to Boolean
-    let darkMode = JSON.parse(val.value)
+    let darkMode
+    if (val.value === 'undefined') {
+      darkMode = true
+    } else {
+      // String to Boolean
+      darkMode = JSON.parse(val.value)
+    }
     DarkMode(darkMode)
   },
   { immediate: true, deep: true }
