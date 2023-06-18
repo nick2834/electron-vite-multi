@@ -6,13 +6,13 @@ function getWinId(winName) {
 
 export default function () {
   // 打开主窗口
-  ipcMain.handle('open-main', () => {
+  ipcMain.handle('mainwin', () => {
     winControl.openWindow({
       name: 'main',
       route: '/Main/index.html'
     })
   })
-  ipcMain.handle('open-subs', () => {
+  ipcMain.handle('subwin', () => {
     winControl.openWindow({
       name: 'subs',
       route: '/Subs/index.html'

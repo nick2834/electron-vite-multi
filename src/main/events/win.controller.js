@@ -65,7 +65,7 @@ class WindowController {
       global['winstates-' + loginID].close() // 或者close
       // 彻底删除登录窗口进程
       delete global['winstates-' + loginID]
-      global.winObj.winMap.delete('login')
+      globalWindow.delete('login')
       this.loadURL(currentWindow.webContents, route)
       // 创建系统托盘
       trayControl.create(currentWindow)
@@ -82,14 +82,15 @@ class WindowController {
       this.loadWebview(currentWindow, route)
       // 子窗口关闭是需清除标签数组
       currentWindow.on('close', () => {
+        globalWindow.delete('subs')
         delete global['winstates-' + winID]
         this.destroyBrowserView(currentWindow)
       })
       currentWindow.webContents.on('close', async () => {
-        console.log('webContents close')
+        // console.log('webContents close')
       })
       currentWindow.webContents.on('destroyed', () => {
-        console.log('destroyed')
+        // console.log('destroyed')
       })
     }
     currentWindow.center()
@@ -119,8 +120,8 @@ class WindowController {
     }
   }
   // 增加窗口池
-  addWindowPool(options) {
-    let name = options?.name || 'subs'
+  addWindowPool() {
+    let name = 'subs'
     return new Promise((resolve) => {
       const subWin = new BrowserWindow({
         title: '子窗口',
@@ -166,7 +167,7 @@ class WindowController {
     view.setBounds({ x: 0, y: 0, width: win.getSize()[0], height: win.getSize()[1] })
     view.setAutoResize({ width: true, height: true })
     this.loadURL(view.webContents, url)
-    view.webContents.openDevTools()
+    // view.webContents.openDevTools()
   }
   // 销毁browserview
   destroyBrowserView() {

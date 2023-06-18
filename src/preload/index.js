@@ -3,7 +3,7 @@ import { electronAPI } from '@electron-toolkit/preload'
 
 // Custom APIs for renderer
 const api = {
-  openMainWindow: () => ipcRenderer.invoke('open-main')
+  openWindow: (name) => ipcRenderer.invoke(name)
 }
 
 // Use `contextBridge` APIs to expose Electron APIs to
