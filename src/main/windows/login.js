@@ -4,7 +4,7 @@ import { is } from '@electron-toolkit/utils'
 import icon from '../../../resources/icon.png?asset'
 import platform from '../utils/platform'
 
-const loginUrl = '/Login/index.html'
+const loginUrl = '/pages/Login/index.html'
 
 export default function (BrowserWindow) {
   const loginWindow = new BrowserWindow({

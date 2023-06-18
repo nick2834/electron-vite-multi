@@ -20,7 +20,7 @@
 <script setup>
 import { ref, watch } from 'vue'
 import { useStorage } from '@vueuse/core'
-import { useTheme } from '../../hooks/useTheme'
+import { useTheme } from '@hooks/useTheme'
 const isDark = useStorage('theme')
 const { DarkMode } = useTheme()
 watch(

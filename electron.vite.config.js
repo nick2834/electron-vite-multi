@@ -8,10 +8,10 @@ const glob = require('glob')
 
 const getEntryPath = () => {
   const pageEntry = {}
-  glob.sync('./src/renderer/**/index.html').forEach((entry) => {
+  glob.sync('./src/renderer/pages/**/index.html').forEach((entry) => {
     const pathArr = entry.split('/')
     const name = pathArr[pathArr.length - 2]
-    pageEntry[name] = join(process.cwd(), `/src/renderer/${name}/index.html`)
+    pageEntry[name] = join(process.cwd(), `/src/renderer/pages/${name}/index.html`)
   })
   delete pageEntry.pages
   delete pageEntry.index
@@ -29,7 +29,8 @@ export default defineConfig({
     resolve: {
       alias: {
         '@': resolve('src/renderer'),
-        '@utils': resolve('src/renderer/utils')
+        '@utils': resolve('src/renderer/utils'),
+        '@hooks': resolve('src/renderer/hooks')
       }
     },
     plugins: [

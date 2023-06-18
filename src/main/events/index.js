@@ -9,13 +9,13 @@ export default function () {
   ipcMain.handle('mainwin', () => {
     winControl.openWindow({
       name: 'main',
-      route: '/Main/index.html'
+      route: '/pages/Main/index.html'
     })
   })
   ipcMain.handle('subwin', () => {
     winControl.openWindow({
       name: 'subs',
-      route: '/Subs/index.html'
+      route: '/pages/Subs/index.html'
     })
   })
   ipcMain.handle('window-min', (event, parmas) => {
