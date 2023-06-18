@@ -2,7 +2,7 @@
   <a-layout class="wrapper">
     <a-layout-sider width="64px"></a-layout-sider>
     <a-layout-content class="wrapper-content flex flex-direction">
-      <a-layout-header>header</a-layout-header>
+      <a-layout-header class="drag">header</a-layout-header>
       <a-layout-content class="flex-sub">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero molestias expedita esse aut
         cupiditate autem magni ratione nam! Ipsum eaque vel perspiciatis sint maxime non optio harum

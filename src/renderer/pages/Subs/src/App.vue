@@ -1,6 +1,6 @@
 <template>
   <a-layout class="wrapper">
-    <a-layout-header>Header</a-layout-header>
+    <a-layout-header class="drag">Header</a-layout-header>
     <a-layout-content class="wrapper-content flex-sub">
       <a-button type="primari" @click="changeTheme">change theme</a-button>
     </a-layout-content>
