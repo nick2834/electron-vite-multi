@@ -11,7 +11,7 @@ app.on('will-finish-launching', () => {
 })
 
 app.whenReady().then(() => {
-  sqlite.create()
+  // sqlite.create()
   IpcEvent(BrowserWindow)
   const winPools = new pools(BrowserWindow)
   // 窗口池创建
