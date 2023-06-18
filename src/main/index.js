@@ -3,6 +3,7 @@ import { electronApp, optimizer } from '@electron-toolkit/utils'
 import loginWindw from './windows/login'
 import pools from './windows/pools'
 import IpcEvent from './events'
+import sqlite from './controller/db.controller'
 app.on('will-finish-launching', () => {
   global.winObj = {
     winMap: new Map()
@@ -10,6 +11,7 @@ app.on('will-finish-launching', () => {
 })
 
 app.whenReady().then(() => {
+  sqlite.create()
   IpcEvent(BrowserWindow)
   const winPools = new pools(BrowserWindow)
   // 窗口池创建

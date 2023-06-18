@@ -1,5 +1,5 @@
 import { ipcMain, BrowserWindow } from 'electron'
-import winControl from './win.controller'
+import winControl from '../controller/win.controller'
 function getWinId(winName) {
   return global.winObj.winMap.get(winName)
 }

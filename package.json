@@ -19,7 +19,10 @@
   "dependencies": {
     "@electron-toolkit/preload": "^2.0.0",
     "@electron-toolkit/utils": "^1.0.2",
-    "electron-updater": "^5.3.0"
+    "assert": "^2.0.0",
+    "better-sqlite3": "^8.4.0",
+    "electron-updater": "^5.3.0",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@electron/notarize": "^1.2.3",
@@ -30,6 +33,7 @@
     "ant-design-vue": "^3.2.20",
     "electron": "^24.4.1",
     "electron-builder": "^23.6.0",
+    "electron-rebuild": "^3.2.9",
     "electron-vite": "^1.0.23",
     "eslint": "^8.42.0",
     "eslint-plugin-vue": "^9.14.1",
@@ -39,6 +43,7 @@
     "unplugin-vue-components": "^0.25.1",
     "vite": "^4.3.9",
     "vite-plugin-html": "^3.2.0",
-    "vue": "^3.3.4"
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.2"
   }
 }
