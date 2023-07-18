@@ -35,9 +35,9 @@ export default defineConfig({
     },
     plugins: [
       vue(),
-      Components({
-        resolvers: [AntDesignVueResolver({ importStyle: true })]
-      })
+      // Components({
+      //   resolvers: [AntDesignVueResolver({ importStyle: true })]
+      // })
     ],
     css: {
       preprocessorOptions: {
