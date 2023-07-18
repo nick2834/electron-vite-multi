@@ -68,6 +68,20 @@ export default defineConfig({
         }
       },
       emptyOutDir: true
+    },
+    server:{
+      proxy:{
+        "/api": {
+          target: "https://www.baidu.com",
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, ""),
+        },
+        "/gov": {
+          target: "https://www.baidu.com",
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/gov/, ""),
+        },
+      }
     }
   }
 })
